@@ -5,16 +5,16 @@
 - vite-vue-ts: vite + vue3 + ts
 - umi-react-ts: umi + react17 + ts
 
-## usage
+## useage
 
 ```sh
 yarn global add degit
 
-degit git@github.com:997282173/chaos-templates.git/<subdirectory>
+degit git@github.com:jeiizou/chaos-templates.git/<subdirectory>
 ```
 
 like:
 
 ```sh
-degit git@github.com:997282173/chaos-templates.git/umi-react-ts
+degit git@github.com:jeiizou/chaos-templates.git/umi-react-ts
 ```
