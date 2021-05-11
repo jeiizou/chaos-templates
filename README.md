@@ -4,8 +4,10 @@
 
 - vite-vue-ts: vite + vue3 + ts
 - umi-react-ts: umi + react17 + ts
+- rollup-sdk-ts: rollup + ts + jest
+- lerna-rollup-sdk-ts: lerna + rollup + sdk + ts + jest
 
-## useage
+## Usage
 
 ```sh
 yarn global add degit
@@ -13,7 +15,7 @@ yarn global add degit
 degit git@github.com:jeiizou/chaos-templates.git/<subdirectory>
 ```
 
-like:
+example:
 
 ```sh
 degit git@github.com:jeiizou/chaos-templates.git/umi-react-ts

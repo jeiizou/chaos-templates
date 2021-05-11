@@ -1,0 +1,30 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "description": "> a demo",
+  "author": "jeiizou <jeiizou@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "types": "lib/demo.d.ts",
+  "main": "lib/demo.js",
+  "module": "lib/demo.ems.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "test": "jest",
+    "test-c": "jest --coverage"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23"
+  }
+}
