@@ -1,27 +1,29 @@
 {
-  "name": "rollup-sdk-ts",
-  "version": "0.0.0",
-  "description": "> a sdk library ",
-  "author": "jeiizou <jeiizou@qq.com>",
+  "name": "@chaos-kit/template-helper",
+  "version": "0.0.1",
+  "description": "> My common project template",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "module": "lib/index.esm.js",
+  "bin": {
+    "chaot": "./lib/index.js"
+  },
   "scripts": {
     "dev": "rollup -c -w",
-    "build": "rollup -c",
-    "test": "jest",
-    "test-c": "jest --coverage"
+    "build": "rollup -c"
   },
-  "files": [
-    "lib"
-  ],
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeiizou/chaos-templates.git"
   },
-  "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeiizou/chaos-templates/issues"
   },
+  "gitpath": "git@github.com:jeiizou/chaos-templates.git",
+  "homepage": "https://github.com/jeiizou/chaos-templates#readme",
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/plugin-transform-runtime": "^7.13.10",
@@ -44,6 +46,12 @@
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
   },
-  "keywords": [],
-  "license": "ISC"
+  "dependencies": {
+    "@types/inquirer": "^7.3.1",
+    "commander": "^7.2.0",
+    "degit": "^2.8.4",
+    "execa": "^5.0.0",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.0.0"
+  }
 }
