@@ -8,6 +8,9 @@
   "bin": {
     "chaot": "./lib/index.js"
   },
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c"
