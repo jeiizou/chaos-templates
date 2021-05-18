@@ -7,6 +7,8 @@ import cleanup from 'rollup-plugin-cleanup';
 import pluginDelete from 'rollup-plugin-delete';
 import path from 'path';
 import pkg from './package.json';
+import commonjs from '@rollup/plugin-commonjs';
+import { terser } from 'rollup-plugin-terser';
 // import copy from 'rollup-plugin-copy';
 
 const extensions = ['.js', '.ts', '.tsx'];
@@ -50,6 +52,8 @@ export default [
                 'preventAssignment': false,
             }),
             cleanup(),
+            commonjs(),
+            terser(),
             pluginDelete({ targets: 'lib/*' }),
         ],
     },
