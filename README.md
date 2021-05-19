@@ -6,6 +6,7 @@
 - umi-react-ts: umi + react17 + ts
 - rollup-sdk-ts: rollup + ts + jest
 - lerna-rollup-sdk-ts: lerna + rollup + sdk + ts + jest
+- vscode-extension-ts: vscode extension + ts
 
 ## Usage
 
