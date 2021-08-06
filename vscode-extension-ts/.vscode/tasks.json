@@ -4,30 +4,79 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"script": "svelte:build",
+			"label": "svelte-compile",
+			"type": "npm"
+		},
+		{
+			"script": "svelte:dev",
+			"label": "svelte-compile-dev",
+			"type": "npm"
+		},
+		{
+			"label": "[build]app",
 			"type": "npm",
-			"script": "watch",
-			"problemMatcher": [
-                "$ts-webpack-watch",
-                "$tslint-webpack-watch"
-			],
+			"script": "dev:app",
 			"isBackground": true,
+			"problemMatcher": {
+				"fileLocation": "relative",
+				"pattern": [
+					{
+						"regexp": "^([^\\\\s].*)\\\\((\\\\d+,\\\\d+)\\\\):\\\\s*(.*)$",
+						"file": 1,
+						"location": 2,
+						"message": 3
+					}
+				],
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": {
+						"regexp": "rollup"
+					},
+					"endsPattern": {
+						"regexp": "^(.*?)waiting for changes(.*?)"
+					}
+				}
+			},
 			"presentation": {
 				"reveal": "never"
 			},
 			"group": {
 				"kind": "build",
 				"isDefault": true
-			}
+			},
+			"dependsOn": [
+				"[build]view"
+			]
 		},
 		{
+			"label": "[build]view",
 			"type": "npm",
-			"script": "test-watch",
-			"problemMatcher": "$tsc-watch",
+			"script": "dev:view",
 			"isBackground": true,
+			"problemMatcher": {
+				"fileLocation": "relative",
+				"pattern": [
+					{
+						"regexp": "^([^\\\\s].*)\\\\((\\\\d+,\\\\d+)\\\\):\\\\s*(.*)$",
+						"file": 1,
+						"location": 2,
+						"message": 3
+					}
+				],
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": {
+						"regexp": "rollup"
+					},
+					"endsPattern": {
+						"regexp": "^(.*?)waiting for changes(.*?)"
+					}
+				}
+			},
 			"presentation": {
 				"reveal": "never"
 			},
-			"group": "build"
 		}
 	]
 }
