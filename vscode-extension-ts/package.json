@@ -1,11 +1,11 @@
 {
-	"name": "fly-snow",
-	"displayName": "飞雪",
-	"description": "飞雪: 代码开发小助手",
+	"name": "extension-name",
+	"displayName": "extension-name",
+	"description": "extension-desc",
 	"author": "jeiizou@qq.com",
-	"repository": "https://jeii.coding.net/public/utils/fly-snow/git/files",
+	"repository": "",
 	"publisher": "Jeii",
-	"version": "0.0.5",
+	"version": "0.0.1",
 	"icon": "assets/images/icon.jpg",
 	"engines": {
 		"vscode": "^1.58.0"
@@ -17,50 +17,7 @@
 		"*"
 	],
 	"main": "./out/extension.js",
-	"contributes": {
-		"configuration": {
-			"type": "object",
-			"title": "飞雪",
-			"properties": {
-				"flySnow.gitDirOnWin": {
-					"type": "string",
-					"description": "本地仓库地址(win)"
-				},
-				"flySnow.gitDirOnUnix": {
-					"type": "string",
-					"description": "本地仓库地址(unix)"
-				},
-				"flySnow.autoSync": {
-					"type": "boolean",
-					"default": false,
-					"description": "是否自动同步"
-				},
-				"flySnow.noRemote": {
-					"type": "boolean",
-					"default": false,
-					"description": "跳过远程仓库校验"
-				}
-			}
-		},
-		"viewsContainers": {
-			"activitybar": [
-				{
-					"id": "flySnow",
-					"title": "飞雪",
-					"icon": "./assets/images/wind.png"
-				}
-			]
-		},
-		"views": {
-			"flySnow": [
-				{
-					"id": "flySnow.content",
-					"name": "工作区",
-					"type": "webview"
-				}
-			]
-		}
-	},
+	"contributes": {},
 	"scripts": {
 		"vscode:prepublish": "yarn run build",
 		"pretest": "yarn run build",
