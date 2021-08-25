@@ -19,6 +19,9 @@ class SettingModel {
 
     constructor() {
         this.config = vscode.workspace.getConfiguration(codeName);
+        vscode.workspace.onDidChangeConfiguration((e) => {
+            this.config = vscode.workspace.getConfiguration(codeName);
+        });
     }
 
     async updateConfig(propName: string, value: any) {
