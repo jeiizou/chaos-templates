@@ -30,38 +30,6 @@ class SettingModel {
         this.config = vscode.workspace.getConfiguration(codeName);
         return res;
     }
-
-    getGitDir(): string | undefined {
-        if (os.platform() === 'win32') {
-            return this.config.get('gitDirOnWin');
-        } else {
-            return this.config.get('gitDirOnUnix');
-        }
-    }
-
-    async setGitDir(ph: string) {
-        if (os.platform() === 'win32') {
-            return this.updateConfig('gitDirOnWin', ph);
-        } else {
-            return this.updateConfig('gitDirOnUnix', ph);
-        }
-    }
-
-    getSync() {
-        return this.config.get('autoSync');
-    }
-
-    async setSync(open: boolean) {
-        return this.updateConfig('autoSync', open);
-    }
-
-    async isNoRemote() {
-        return this.config.get('noRemote');
-    }
-
-    async setNoRemote(value: boolean) {
-        return this.updateConfig('noRemote', value);
-    }
 }
 
 export default SettingModel.create();

@@ -23,6 +23,9 @@
 		"paths": {
 			"@/*": [
 				"./src/*"
+			],
+			"@page-content/*": [
+				"./src/views/content/*"
 			]
 		}
 	},

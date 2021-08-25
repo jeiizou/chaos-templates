@@ -1,9 +1,8 @@
 import { Uri, Webview } from 'vscode';
 import Mustache from 'mustache';
-
 import { getNonce } from '@/common/utils/tools';
 import Context from '@/common/utils/context';
-import indexContent from '@/common/utils/content.html';
+import indexContent from '@/common/utils/template.html';
 
 export function getWebViewContent(script: string, webview: Webview) {
 
